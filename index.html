@@ -5,9 +5,20 @@
 </head>
 <body>
 <p> Good site </p>
+  <button>Change user</button>
 </body>
   <script>
     alert("Hellow");
     document.querySelector("p").onclick = function() { alert("Click html p");}
+    
+var myButton = document.querySelector('button');
+var myHeading = document.querySelector('p');
+    
+   function setUserName() {
+  var myName = prompt('Please enter your name.');
+  localStorage.setItem('name', myName);
+  myHeading.innerHTML  = 'Good site ' + myName;
+} 
+    
   </script>
 </html>
